@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'feedback';
+  navigateToWebsite(){
+    document.location.href = "https://capgemini.com"
+}
 }
