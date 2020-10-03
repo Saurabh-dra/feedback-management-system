@@ -70,7 +70,8 @@ import { NgModule } from '@angular/core';
         MatToolbarModule,
         MatTooltipModule,
         MatTreeModule,
-        MatNativeDateModule
+        MatNativeDateModule,
+        MatDialogModule
     ],
     exports: [
         MatAutocompleteModule,
@@ -106,7 +107,8 @@ import { NgModule } from '@angular/core';
         MatToolbarModule,
         MatTooltipModule,
         MatTreeModule,
-        MatNativeDateModule
+        MatNativeDateModule,
+        MatDialogModule
     ],
     providers: [     
     ]

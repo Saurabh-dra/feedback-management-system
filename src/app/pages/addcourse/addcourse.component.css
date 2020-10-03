@@ -1,0 +1,20 @@
+.mat-card-cvr{ 
+    padding-top: 2%;
+    width:100%; text-align:center;
+    
+  }
+
+
+.example-card{ 
+    margin:0 auto; width: 30%; display:inline-block;
+    border: 1px solid lightgray;
+}
+  
+  mat-form-field {
+      width: 80%;
+      color: black;
+  }
+  
+  mat-card-title {
+      padding-left: 80%;
+  }
