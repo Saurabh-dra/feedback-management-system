@@ -179,8 +179,8 @@
     }
 
     .carousel-caption h4{
-        font-size: 20px;
-        font-family: 'Audiowide';    
+        font-size: 15px;
+        font-family: 'Yanone Kaffeesatz', sans-serif;  
     }
 
     .carousel-caption{
@@ -200,10 +200,10 @@
     }
 
     .secondDiv .one{
-        font-size: 30px;
-        height: 70%;
+        font-size: 10px;
+        height: 50%;
         font-family: 'Audiowide';   
-        margin:10px 20px 10px 20px;        
+        margin:0% 0% 10% 10%;        
         background: white;
         border: 10px #4b3987 solid;
         text-align: center;
@@ -211,8 +211,8 @@
     } 
     
     .secondDiv .gen{
-        font-size: 30px;
-        margin: 30px 10px 0px 25px;
+        font-size: 20px;
+        margin: 0% 0% 10% 10%;
         height: 50px;
         font-family: 'Audiowide';   
         text-align: center;
@@ -234,11 +234,15 @@
 
 
     .month, .faculty{
-        height: 1000px;
-        margin-top: 400px;
+        height: 700px;
+        margin-top: 100px;
         background: #6e61ab;
         transform: skewY(5deg);
         box-shadow: inset 0px 0px 190px 50px gray;
+    }
+
+    .faculty{
+        margin-top: 300px;
     }
 
     .monthImg img{
@@ -254,10 +258,6 @@
     .facultyInput{
         height: 200px;
         margin-top: 150px;
-    }
-
-    #mid{
-        display: none;
     }
 
     .faculty img{
@@ -282,6 +282,10 @@
         box-shadow: 0px 0px 10px 2px #6e61ab;
         font-size: 20px;
         margin: 0;
+    }
+
+    .topButtonDiv{
+            display: none;
     }
     
 }
