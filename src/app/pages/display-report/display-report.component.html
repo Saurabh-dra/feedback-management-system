@@ -1,0 +1,105 @@
+<span *ngIf = "reportType != 'incomplete'; then con1"></span>
+<span *ngIf = "reportType == 'incomplete'; then con2"></span>
+
+<ng-template #con2>
+
+  <div class="table-responsive" [@listAnimation] >
+    
+
+    <div class="jumbotron">
+
+      <h1>incomplete feedbacks</h1>
+      
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Training ID</th>
+            <th scope="col">Participant ID</th>
+            <th scope="col">Course ID</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+        </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor = "let feedback of feedbacks; let i = index" >
+            <th scope="row">{{i}}</th>
+            <td>{{feedback.training.id}}</td>
+            <td>{{feedback.participantId}}</td>
+            <td>{{feedback.training.courseId}}</td>
+            <td>{{feedback.training.startDate}}</td>
+            <td>{{feedback.training.endDate}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
+
+</ng-template>
+
+
+<ng-template #con1> 
+
+    <div class="jumbotron">
+
+      <h1><i>report of: {{reportId}}</i></h1>
+      
+    </div>
+    
+    
+    <div class="table-responsive" [@listAnimation] >
+    
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Training ID</th>
+                <th scope="col">Participant ID</th>
+                <th scope="col">Com. Skills</th>
+                <th scope="col">Doubt Clarity</th>
+                <th scope="col">Resource Sharing</th>
+                <th scope="col">Time Management</th>
+                <th scope="col">Remarks</th>  
+            </tr>
+            </thead>
+            <tbody >
+              <tr *ngFor = "let feedback of feedbacks; let i = index" >
+                <th scope="row">{{i}}</th>
+                <td>{{feedback.training.id}}</td>
+                <td>{{feedback.participantId}}</td>
+                <td>{{feedback.feedbackRating.communicationSkills}}</td>
+                <td>{{feedback.feedbackRating.doubtClarity}}</td>
+                <td>{{feedback.feedbackRating.resourceSharing}}</td>
+                <td>{{feedback.feedbackRating.timeManagement}}</td>
+                <td>{{feedback.feedbackRating.comment}}</td>
+              </tr>
+              <tr class="average">
+                  <td><b>AVERAGE</b></td>
+                  <td> RATING</td>              
+                  <td>></td>
+                  <td *ngFor="let i of averageFeedback">{{i}}</td>
+                  <td></td>
+              </tr>
+            </tbody>
+          </table>
+    
+    </div>
+
+    <div class="col-12">
+
+      <div class="col-3"></div>
+
+      <div class="col-lg-6 col-md-12">
+
+        <div id="chartContainer" style="height: 300px; width: 100%;">
+        </div>
+
+      </div>
+
+    </div>
+
+
+</ng-template>
+<canvas id="radarChart"></canvas>

@@ -1,0 +1,288 @@
+@media only screen and ( min-width: 1200px ){
+
+    /* ______________________Carousel_________________________________________________*/
+
+    .carousel-inner img{ 
+        background: linear-gradient(to bottom,#3F0081,#4b3987,#6e61ab, #928fce);
+        height: 350px;
+        opacity: 0.8;
+    }
+
+    .carousel{
+        margin: 20px 0px 10px 0px;
+    }
+
+    .carousel-caption h4{
+        font-size: 30px;
+        font-family: 'Yanone Kaffeesatz', sans-serif;  
+    }
+
+    .carousel-caption{
+        vertical-align: top;
+        margin-bottom: 5%;
+    }
+
+    .carousel-inner:hover .carousel-caption{
+        transform: scale(1.2);
+        transition-duration: 10s;
+    }
+
+    /* ______________________SECOND_DIVISION_________________________________________ */
+    
+
+    .secondDiv{
+        height: 120px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .secondDiv .one{
+        font-size: 30px;
+        font-family:'Yanone Kaffeesatz', sans-serif;    
+        margin:10px 20px 10px 20px;        
+        background: white;
+        border: 10px#4b3987 solid;
+        text-align: center;
+        padding-top: 2.5%;
+    } 
+    
+    .secondDiv .gen{
+        z-index: 100;
+        font-size: 30px;
+        margin: 10px;
+        border-radius: 50px;
+        font-family: 'Yanone Kaffeesatz', sans-serif;     
+        text-align: center;
+        padding-top: 3%;
+        box-shadow:  0px 0px 12px 1px #6e61ab;
+        background-color: whitesmoke;
+    }
+
+    .secondDiv .gen:hover{
+        border: #928fce;
+        border-style: solid;
+        border-width: 0px 0px 20px 0px;
+        transition: 500ms;;
+        box-shadow: inset 0px 0px 14px 1px  #928fce;
+        cursor: pointer;
+    }
+
+
+    /* _______________________MONTH_&__FACUTY_________________________ */
+
+
+    .month, .faculty{
+        height: 500px;
+        margin-top: 200px;
+        background: #6e61ab;
+        transform: skewY(5deg);
+        box-shadow: 0px 0px 20px 1px gray, inset 0px 0px 190px 50px gray;
+    }
+
+    .monthImg img, .faculty img{
+        max-width: 100%;
+        transform: skewY(-5deg);
+        margin-top: 50px;
+    }
+
+    .monthInput, .facultyInput{
+        transform: skewY(-5deg);
+        padding:150px;
+    }
+
+    .in{
+        width: 303px;
+        height: 60px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 2px  #928fce;
+        border: 5px #6e61ab solid;
+    }
+
+    .in:hover, .in::selection{
+        border: 5px  #0f3057 solid;
+    }
+
+
+    .btn{
+        font-family: Roboto; 
+        width: 300px; 
+        box-shadow: 0px 0px 5px 1px #928fce;
+        font-size: 20px;
+        margin: 0;
+    }
+
+
+    .topButtonDiv{
+        position: sticky;
+        top: 500px;
+        z-index: 100;
+        float: right;
+        width: 160px;
+        margin-right: 35px;
+        padding: 5px;
+    }
+
+    .topButtonDiv:hover{
+        background: linear-gradient(to right, white 20%, #3F0081 50%, white 100%);
+        animation: shine 3s linear infinite;
+        background-size: 200% auto;
+        border-radius: 10%;
+    }
+    
+    @keyframes shine {
+            to {
+            background-position: 200% center;
+            }
+        }
+
+    .topButton{
+        width: 150px;
+        background-color: whitesmoke;
+        border-radius: 10%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and ( max-width: 700px ){
+
+    /* ______________________Carousel_________________________________________________*/
+
+    .carousel-inner img{
+        background: linear-gradient(to bottom,#3F0081, #4b3987,#6e61ab, #928fce);
+        height: 200px;
+        opacity: 0.8;
+    }
+
+    .carousel{
+        margin: 20px 0px 10px 0px;
+        max-width: 100%;
+    }
+
+    .carousel-caption h4{
+        font-size: 20px;
+        font-family: 'Audiowide';    
+    }
+
+    .carousel-caption{
+        vertical-align: top;
+    }
+
+    .carousel-inner:hover .carousel-caption{
+        transform: scale(1.2);
+        transition-duration: 10s;
+    }
+
+    /* ______________________SECOND_DIVISION_________________________________________ */
+    
+
+    .secondDiv{
+        height: 120px;
+    }
+
+    .secondDiv .one{
+        font-size: 30px;
+        height: 70%;
+        font-family: 'Audiowide';   
+        margin:10px 20px 10px 20px;        
+        background: white;
+        border: 10px #4b3987 solid;
+        text-align: center;
+        padding-top: 1.2%;
+    } 
+    
+    .secondDiv .gen{
+        font-size: 30px;
+        margin: 30px 10px 0px 25px;
+        height: 50px;
+        font-family: 'Audiowide';   
+        text-align: center;
+        padding-top: 2%;
+        box-shadow:  0px 0px 12px 1px #6e61ab;
+    }
+
+    .secondDiv .gen:hover{
+        border: #928fce;
+        border-style: solid;
+        border-width: 0px 0px 10px 0px;
+        transition: 500ms;
+        box-shadow: inset 0px 0px 14px 1px #928fce;
+        cursor: pointer;
+    }
+
+
+    /* _______________________MONTH_&__FACUTY_________________________ */
+
+
+    .month, .faculty{
+        height: 1000px;
+        margin-top: 400px;
+        background: #6e61ab;
+        transform: skewY(5deg);
+        box-shadow: inset 0px 0px 190px 50px gray;
+    }
+
+    .monthImg img{
+        max-width: 100%;
+        transform: skewY(-5deg);
+        margin-top: 50px;
+    }
+
+    .monthInput{
+        transform: skewY(-5deg);
+    }
+
+    .facultyInput{
+        height: 200px;
+        margin-top: 150px;
+    }
+
+    #mid{
+        display: none;
+    }
+
+    .faculty img{
+        width: 100%;
+        transform: skewY(-5deg);
+        margin-top: 0;
+    }
+
+    .in{
+        width: 100%;
+        height: 45px;
+        box-shadow: 0px 0px 10px 2px #6e61ab;
+    }
+
+    .in:hover, .in::selection{
+        border: 5px  #0f3057 solid;
+    }
+
+    .btn{
+        font-family: Roboto; 
+        width: 100%; 
+        box-shadow: 0px 0px 10px 2px #6e61ab;
+        font-size: 20px;
+        margin: 0;
+    }
+    
+}
+

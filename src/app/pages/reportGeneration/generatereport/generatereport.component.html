@@ -1,0 +1,97 @@
+<div class="body">
+
+    <div class="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" *ngFor = "let quote of quotes; let i = index" [attr.data-slide-to]="i" ngClass=" i == 0 ? 'active' : '' "></li>
+            </ol>
+            <div class="carousel-inner">
+                <div *ngFor = "let quote of quotes; let i = index" class="divZoom carousel-item" [ngClass]="{'active' : i == 0}">
+                    <img class="imgZoom d-block w-100" >
+                    
+                    <div class="carousel-caption">
+                        <h4>"{{quote[0]}}"</h4>
+                        <h4><i>- {{quote[1]}}</i></h4>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+ 
+    <div class="col-12 secondDiv row">
+
+        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 one">FEEDBACK REPORT, ONE CLICK AWAY ></div>
+
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 gen" (click) = "scrollTo('.faculty')" >By Faculty</div>
+
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 gen" (click) = "scrollTo('.month')" >By Month</div>
+
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 gen" (click) = "fetchReport('incomplete')">Incomplete</div>
+
+    </div>
+
+
+
+    <div class="faculty col-12 row" style="transform: skewY(-5deg);">
+    
+        
+        <div class="facultyInput col-lg-5 col-md-5 col-sm-12 col-xs-12" style="transform: skewY(5deg);">
+
+            <h2 style="font-family: 'Yanone Kaffeesatz', sans-serif;   font-size: 37px; color: white;" ><ins>Select Faculty</ins></h2>
+            <br>
+            <input [(ngModel)] = "id" class="in" type="text" placeholder="faculty name goes here">
+            <br><br>            
+            <button (click) = "fetchReport('faculty')" class="btn">GENERATE REPORT</button>
+            
+        </div>
+
+        <div class="col-lg-1 col-md-0 col-sm-0 col-xs-0 " id="mid"></div>
+
+        <div class="facultyImg col-lg-5 col-md-7 col-sm-12 col-xs-12" style="transform: skewY(10deg);">
+    
+            <img src="assets/img/faculty.svg" alt="">
+    
+        </div>
+
+    
+
+    </div>
+    
+    <div class="topButtonDiv" >
+        <button (click) = "scrollTo('.body')" class="btn topButton">Go TOP</button>
+    </div>
+
+
+    <div class="month col-12 row">
+    
+        <div class="col-lg-1 col-md-0 col-sm-0 col-xs-0"></div>
+
+        <div class="monthImg col-lg-5 col-md-7 col-sm-12 col-xs-12">
+    
+            <img src="assets/img/month.svg" alt="">
+    
+        </div>
+
+    
+        <div class="monthInput col-lg-5 col-md-5 col-sm-12 col-xs-12">
+
+            <h2 style="font-family: 'Yanone Kaffeesatz', sans-serif;  font-size: 37px; color: white;"><ins>Select Month</ins></h2>
+            <br>
+            <input [(ngModel)] = "id" class="in" type="month">
+
+            <br><br>            
+            <button (click) = "fetchReport('month')" class="btn">GENERATE REPORT</button>
+            
+        </div>
+
+    </div>
+
+</div>
